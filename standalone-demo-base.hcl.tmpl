@@ -1,0 +1,35 @@
+datacenter = ${DATACENTER}
+domain = ${DOMAIN}
+
+performance {
+  raft_multiplier = 1
+}
+
+bind_addr = ${BIND_ADDR}
+advertise_addr = ${ADVERTISE_ADDR}
+advertise_addr_wan = ${ADVERTISE_WAN_ADDR}
+
+client_addr = "0.0.0.0"
+
+addresses = {
+  dns = "0.0.0.0"
+  http = "0.0.0.0"
+  https = "0.0.0.0"
+  grpc = "0.0.0.0"
+}
+
+ports = {
+  dns = 8600,
+  http = 8500,
+  https = -1,
+  serf_lan = 8301,
+  serf_wan = 8302,
+  server = 8300,
+  grpc = 8502
+}
+
+connect {
+  enabled = true
+}
+
+enable_syslog = true
